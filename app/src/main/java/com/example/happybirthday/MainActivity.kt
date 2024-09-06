@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     GreetingImage(
                         message = stringResource(R.string.happy_birthday_text),
-                        from = stringResource(R.string.sender),
+                        from = stringResource(R.string.signature_text),
                         modifier = Modifier.padding(8.dp),
                     )
                 }
