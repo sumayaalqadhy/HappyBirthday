@@ -3,6 +3,7 @@ package com.example.happybirthday
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -31,7 +33,7 @@ class MainActivity : ComponentActivity() {
                     GreetingText(
                         message = "Happy Early Birthday Sarah!",
                         from = " From Sumaya",
-                        modifier = Modifier.padding(8.dp)
+                        modifier = Modifier.padding(8.dp),
                     )
                 }
                 }
@@ -44,7 +46,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
-        modifier = modifier){
+        modifier = modifier.background(Color.Magenta)){
         Text(
             text = message,
             fontSize = 100.sp,
