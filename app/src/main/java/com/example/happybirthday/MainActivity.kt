@@ -74,9 +74,12 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.possum)
+    val imageRetainer = painterResource(R.drawable.retainer)
     Box(modifier = modifier
+        .fillMaxSize()
         .background(Color(0xFFFFC0CB))
-    ) {
+    )
+     {
         Image(
             painter = image,
             contentDescription = null,
@@ -85,6 +88,17 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.Center)
+                .background(Color.LightGray)
+                .padding(8.dp)
+        )
+        Image(
+            painter = imageRetainer,
+            contentDescription = null,
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .padding(50.dp)
+                .background(Color.LightGray)
+                .padding(8.dp)
         )
         GreetingText(
             message = message,
